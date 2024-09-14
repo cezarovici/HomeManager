@@ -8,4 +8,6 @@ export interface Cheltuiala {
     name: string;
     price: number;
     description: string;
+    month: number;
+    year: number;
 }

@@ -23,7 +23,7 @@ const loadDatabase = async () => {
   const dbFilePath = `${FileSystem.documentDirectory}SQLite/${dbName}`;
 
   const fileInfo = await FileSystem.getInfoAsync(dbFilePath);
-  if (!fileInfo.exists) {
+  if (fileInfo.exists) {
     await FileSystem.makeDirectoryAsync(
       `${FileSystem.documentDirectory}SQLite`,
       { intermediates: true }
